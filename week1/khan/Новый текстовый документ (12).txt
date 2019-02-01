@@ -1,0 +1,6 @@
+fill(1,2,4);
+textSize(30);
+text("My favorite foods",90,40);
+text("vegetables",30,80);
+text("fruits",30,120);
+text("water",30,160);

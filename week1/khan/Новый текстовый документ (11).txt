@@ -1,0 +1,28 @@
+noStroke();
+var x = 140;
+var y = 240;
+var faceSize = 360;
+
+// ears
+var earSize=faceSize*1/2;
+fill(89, 52, 17);
+ellipse(faceSize+40-faceSize*2/5, faceSize+40-faceSize*2/5, earSize, earSize);
+ellipse(faceSize+40+faceSize*2/5, faceSize+40-faceSize*2/5, earSize, earSize);
+
+// face
+fill(163, 113, 5);
+ellipse(faceSize+40, faceSize+40, faceSize, faceSize);
+
+
+
+//eyes 
+fill(0, 0, 0);
+ellipse(x-faceSize/4,y-faceSize/8, faceSize*1/8 ,faceSize*1/8);
+ellipse(x+faceSize/4,y-faceSize/8, faceSize*1/8, faceSize*1/8);
+
+
+
+//nose
+fill(89, 52, 20);
+ellipse(faceSize+40, faceSize+40+faceSize/8, faceSize*4/15, faceSize/5);
+

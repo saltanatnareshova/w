@@ -1,0 +1,7 @@
+
+
+draw = function() {
+    fill(153, 50, 153);
+    stroke(2,3,4);
+    ellipse(mouseX, mouseY, mouseX, mouseY);
+};
