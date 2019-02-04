@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Facebook</title>
+<style>
+   
+    #radius{
+        border-radius: 4px;
+    }
+    #login{
+        width:20%;
+        
+    }
+    #log{
+        width:10%;
+        background-color: rgb(15, 46, 223);
+        border-color: blue;
+        height:5px;
+        padding-top:4px;
+        padding-block-end: 16px;
+        margin-top:10px;
+        margin-left: 10px;
+        padding-left: 10px;
+        
+        
+    }
+    #pass{
+        margin-left: 100px;
+       
+    }
+    #logpass{
+        margin-left: 90px;
+        color: white;
+    }
+    #form1{
+        margin-right: 0%;
+        margin-left: 0%;
+        margin-top: 0px;
+      
+    }
+    
+    #h1{
+        color: white;
+        padding-left: 30%
+        
+    }
+    #e-mail{
+        color: white;
+    }
+    #forget{
+        margin-left: 36%;
+        color: white;
+    }
+    
+    #form2{
+        margin-left: 0%;
+        margin-right: 9%;
+    }
+    .body{
+        background-image: url(imgforf.png); 
+        width: 1400px;
+        margin-top: 0%;
+        margin-left: 0px
+
+    }
+    .columns{
+        column-count: 2;
+    }
+    h3{
+        color: blue;
+        padding-left: 20%;
+        padding-right: 10%;
+    }
+    #header{
+        background-color: darkblue;
+        width: 1400px;
+        height: 130px;
+    }
+    #world{
+        margin-left: 16%;
+    }
+    #button2{
+        width: 50%;
+  background-color:#4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 15px;
+  border-color: #4CAF50;
+  border-radius: 4px;
+  cursor: pointer;
+    }
+
+footer{
+    background-color: white;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+    <div class="body">
+<div class="columns" id="header">
+  <h1 id="h1" class="blue">facebook</h1>
+  <br>
+  <br>
+  <br>
+<form class="blue" id="form1" action="test.txt" target="_blank" method="POST">
+       <label id="e-mail">e-mail or phone number </label>
+    <label id="logpass" > password</label>
+    <br>    
+    <input id="login" type="text" name="e-mail"> 
+    <input id="pass" type="password" name="password">
+    <button id="log" type="submit">login</button>
+<br>
+<br>
+
+    <a id="forget" href="https://www.facebook.com/login/identify">Забыли аккаунт?</a>
+    <br>
+  
+</form>
+</div>
+<br>
+<br>
+<div class="columns">
+<h3>Facebook helps you to connect with friends and the world around you</h3>
+<img id = "world" src="world.png">
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+
+<form id="form2" action = "test.txt" target="_blank" method = "POST">
+  <h1>Регистрация</h1>
+    <p>Это бесплатно и всегда будет бесплатно</p>
+        <label></label><input id="radius" type="text" name="firstname" placeholder="First name" required autofocus>
+        <input id="radius" type="text" name="lastname" placeholder="Last name" required >
+        <br>
+        <br>
+        <input id ="radius" type="tel" name="telnumber" placeholder = "Phone number or e-mail" required>
+        <br>
+        <br>
+        <input id="radius" type="password" name="password" placeholder="New password" required>
+        <br>
+        <br>
+        <label>Дата рождения</label>
+        <br>
+        <br>
+        <input id="radius" type="date" name="bday">
+        <p style="color: blue">Зачем указывать дату рождения?</p>
+        <br>
+        <br>
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+        <br>
+        <br>
+        <p>Нажимая кнопку регистрации вы принимаете <a href="">Условия, Политику использования данных</a> и <a href="">Политику в отношении файлов coocie.</a>Вы можете получать от нас SMS-уведомления, отказаться от которых можно в люой момент.</p>
+        <button id="button2" type="submit">Регистрация</button>
+
+    </form>
+</div>
+</div>
+</body>
+</html>
