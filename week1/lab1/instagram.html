@@ -20,12 +20,14 @@
                column-count: 2;
                width: 70%;
                height: 100%;
-               margin-left: 20%;
+               margin-left: 10%;
                margin-top: 50px;
            }
            p{
                color: rgb(175, 166, 166);
                text-align: center;
+               padding-left: 30px;
+               padding-right: 30px;
                
            }
            .border2{
@@ -34,9 +36,12 @@
             width: 70%;
             margin-left: 20%;
            }
+           #instagram{
+               margin-left: 20%;
+           }
            .login{
                color: black;
-             text-align: center;
+               padding-left: 40px;
            }
            #gray{
                color: rgb(175, 166, 166);
@@ -50,13 +55,50 @@
            #button1{
                width:255px;
                margin-left: 30px;
-               margin-top: 7px;
+               margin-top: 5px;
                color:white;
-               background-color: rgb(46, 130, 209);
+               background-color: rgb(29, 105, 177);
                height: 30px;
                border-radius: 4px;
+               text-align: center;
+               padding-top: 0px;
                
                
+           }
+           #lines{
+               overflow: hidden;
+               position: relative;
+               margin: 0%;
+               text-align: center;
+               white-space: nowrap;
+               padding-top: 10px;
+               padding-bottom: 10px;
+           }
+           #lines::before,
+           #lines::after{
+               content: '';
+               display: inline-block;
+               position: relative;
+                top: 1px;
+                width: 30%;
+                height: 1px;
+                vertical-align: middle;
+                background-color:darkgray;
+           }
+           #lines::before{
+               left: -10px;
+               margin-left: -50%;
+           }
+           #lines::after{
+               left: 10px;
+               margin-right: -50%;
+           }
+           #facebook{
+               width: 15px;
+               height: 15px;
+               padding-top: 2px;
+               padding-bottom: 0px;
+               margin-left: 10px;
            }
         </style>
     </head>
@@ -76,11 +118,11 @@
        <br>
        <br>
        <div class="reg">
-           <img src="instagramlogo.jpg">
+           <img id="instagram" src="instagramlogo.jpg">
             <p id="gray">Зарегестрируйтесь, чтобы смотреть фото и видео ваших друзей.</p>
             <form id="form" action="test.txt" target="_blank" method="POST">
-                <button id="button1" type="submit">Вoйти через Facebook</button>
-                <p>или</p>
+                <button id="button1" type="submit"><img id ="facebook" src="facebookinstagram.png"> Вoйти через Facebook</button>
+                <p id="lines">или</p>
                 <input id="radius" type="text" name="number" placeholder="Моб. телефон или эл. адрес" required ><br>
                 <input id="radius" type="text" name="Firstname lastname" placeholder="Имя и фамилия" required><br>
                 <input id="radius" type="text" name="e-mail" placeholder="Имя пользователя" required><br>
@@ -91,7 +133,7 @@
        </div> 
        <br>
        <div class="border2">
-            <p class="login">Есть аккаунт? <a href="">Вход</a></p>
+            <p class="login">Есть аккаунт? <a href="https://www.instagram.com/?hl=ru">Вход</a></p>
        </div>
        <p class="login">Устоновите приложение</p>
     </div>
