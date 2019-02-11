@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDoList</title>
+        <style>
+            #header{
+                color:gray;
+                background-color: black;
+                width: 100%;
+                height: 75px;
+                padding-left: 20px;
+                padding-top: 1px;
+                margin-left: -8px;
+                margin-top: -7px;
+                font-family: fantasy;
+            }
+            #todo{
+                margin-left: 25%;
+
+            }
+            #form{
+                margin-left: 30%;
+            }
+           
+            #add{
+                width: 50px;
+                height: 20%;
+                margin-left: 20px;
+                border-radius: 5px;
+                background-color: blue;
+                color: white;
+                padding-top: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            
+            
+            ul li{
+                cursor: pointer;
+                padding: 9px 9px 20px 50px;
+                list-style-type: none;
+                transition: 02s;
+                
+            }
+            
+            #header:after{
+                content: "";
+                display:table;
+                clear: both;
+            }
+            #list{
+                margin-left: 300px;
+                margin-top: 50px;
+            }
+            li{
+                border-style:solid;
+                border-color: grey;
+                width: 700px;
+                height: 20px;
+                border-width: 0.5px;
+                
+            }
+            ul li.checked {
+                color: black;
+                text-decoration: line-through;
+                
+            }
+            ul li.checked::before {  /*pseudo element*/
+                content:'';
+                position: absolute;
+                border-color: black;
+                border-style: solid;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                height: 15px;
+                width: 7px;
+                left:27%;
+            }
+            #Task {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 50%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+.close{
+    width: 20px;
+    height: 20px;
+    position:fixed;
+    padding-left: 40%;
+    
+}
+        </style>
+    </head>
+    <body>
+        <div id="header">
+        <h4>ToDo List</h4>
+        </div>
+        <h1 id="todo">ToDo List</h1>
+        <div id="form">
+        <input id="Task" type="text" placeholder="New Task">
+        <button id="add" onclick="newElement()">Add</button>
+        <br>
+        </div>
+        
+        <ul id="list">
+            <li id="first">First item</li>
+            <li id="first">Second item</li>
+            <li id="first">Third item</li>
+        </ul>
+        <script>
+        var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var button = document.createElement("img");
+  button.setAttribute("src", "delete.jpg");
+  button.className = "close";
+  myNodelist[i].appendChild(button);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+var list=document.querySelector('ul')
+        list.addEventListener('click',function(ev){
+            if(ev.target.tagName==='LI'){
+                ev.target.classList.toggle('checked');
+            }
+        },false);
+         
+          function newElement(){
+              var li = document.createElement("li");
+              var inputValue = document.getElementById("Task").value;
+              var t = document.createTextNode(inputValue);
+              li.appendChild(t);
+              if(inputValue===''){
+                  alert("You wrote nothing)))");
+              }else{
+                  document.getElementById("list").appendChild(li);
+              }
+              document.getElementById("Task").value="";
+              var button = document.createElement("img");
+              button.setAttribute("src","delete.jpg");
+              button.className="close";
+              li.appendChild(button);
+              for (i=0; i<close.length; i++){
+                  close[i].onclick = function(){
+                      var div = this.parentElement;
+                      div.style.display="none";
+                  }
+              }
+             
+          }
+        </script>
+    </body>
+</html>
