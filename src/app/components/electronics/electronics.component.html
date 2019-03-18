@@ -1,0 +1,192 @@
+<body>
+  <div class="container">
+    <br>
+
+      <form>
+        <div class="form-group">
+          <input type="text" id="typeSmth" placeholder="Что вы искали?" class="form-control"> <br>
+          <img src="https://images.all-free-download.com/images/graphiclarge/mouse_click_on_the_icon_vector_280955.jpg" id="logo" class="rounded-circle" alt="Logo">
+        </div>
+      </form>
+
+      <div class="card" id="card1" style="width:300px">
+        <img class="card-img-top" src="https://static-eu.insales.ru/images/products/1/473/177218009/mbp13-silver-select-201807.jpeg" id = "image1" alt="Card image">
+          <div class="card-body">
+            <h5 class="card-title"><strong>{{price}} тг. </strong></h5>
+            <p class="card-title">{{model}} | {{name}}</p>
+            <p class="card-title">{{color}}</p>
+            <button id="btn1"  class="btn btn-primary" (click)="showEdit()">Подробнее</button> 
+          </div>
+      </div>
+      
+
+      <div class="card" id = "card2" style="width:300px">
+          <img class="card-img-top" src="https://images.ua.prom.st/1453081470_w640_h640_5481751e1ba2727915f1314881ea53b7.jpg" id = "image1" alt="Card image">
+            <div class="card-body">
+              <h5 class="card-title"><strong>140 000 тг. </strong></h5>
+              <p class="card-title"> SAMSUNG | УМНЫЕ ЧАСЫ SMART WATCH SM-R810NZKA</p>
+              <p class="card-title">black</p>
+              <button id="btn1"  class="btn btn-primary" (click)="showEdit2()">Подробнее</button> 
+            </div>
+        </div>
+        
+
+        <div class="card" id = "card3" style="width:300px">
+            <img class="card-img-top" src="https://img.mvideo.ru/Pdb/20030172b.jpg" id = "image1" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title"><strong>75 000 тг. </strong></h5>
+                <p class="card-title">Thomas | Пылесос Twin Helper Aquafilter 788557</p>
+                <p class="card-title">red</p>
+                <button id="btn1"  class="btn btn-primary" (click)="showEdit3()">Подробнее</button> 
+              </div>
+          </div>
+          <br>
+
+    
+      <div class="card11" *ngIf=isEdit>
+          <div class="card-header"><strong>{{model}}</strong></div>
+          <div class="card-body">{{name}}</div>
+          <div class="dropdown dropright">
+              <button type="button" id="razmer1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Выберите цвет
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">black</a>
+                <a class="dropdown-item" href="#">silver</a>
+                <a class="dropdown-item" href="#">darkblue</a>
+              </div>
+            </div>
+          <div class="card-footer"><mark>О товаре:</mark></div>
+          <p>Ноутбук Apple MacBook Pro 13 with Retina display and Touch Bar Mid 2018 MR9U2RU/A (Intel Core i5 2300 MHz/13.3"/2560x1600/8GB/256GB SSD/DVD нет/Intel Iris Plus Graphics 655/Wi-Fi/Bluetooth/macOS) Устройства хранения данных
+            <br>Оптический привод: нет
+            <br>Объем накопителя: (SSD)
+            256 ГБ
+            <br>Связь: 
+            Беспроводная связь
+            Wi-Fi IEEE 802.11ac, Bluetooth 5.0
+            <br>Интерфейсы:
+            вход микр./вых. на наушники Combo, Thunderbolt 3x4
+            <br>Питание:
+            Время работы от аккумулятора
+            10 ч
+            <br>Емкость аккумулятора:
+            58 Вт⋅ч
+            <br>Тип аккумулятора:
+            Li-Ion
+            <br>Устройства ввода:
+            Устройства позиционирования
+            Touchpad
+            <br>Количество клавиш клавиатуры:
+            65
+            <br>Подсветка клавиатуры:
+            есть
+            <br>Сенсорная панель: Touch Bar
+            есть
+            <br>Звук:
+            Встроенные колонки
+            есть
+            <br>Встроенный микрофон:
+            есть
+            <br>Дополнительно:
+            Веб-камера
+            есть
+            <br>Сканер отпечатка пальца :
+            есть
+            <br>Особенности:
+            металлический корпус
+            <br>Размеры: 304.1x212.4x14.9 мм
+            Вес
+            1.37 кг</p> 
+          <button id="nikebtn" class="btn btn-info">Добавить в корзину</button> 
+      </div>
+      
+      <div class="card22" *ngIf=isEdit2>
+          <div class="card-header"><strong>SAMSUNG</strong></div>
+          <div class="card-body">УМНЫЕ ЧАСЫ SMART WATCH SM-R810NZKA</div>
+          <div class="dropdown dropright">
+              <button type="button" id="razmer1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Выберите цвет
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">black</a>
+              </div>
+            </div>
+          <div class="card-footer"><mark>О товаре:</mark></div>
+          <p>Сеть
+            <br>Стандарт связи: Только Bluetooth
+            <br>Подключения:
+            ANT+Нет
+            <br>Система навигации: GPS,Glonass
+            Wi-Fi802.11 b/g/n 2.4GHz
+            NFCДа
+            <br>Версия Bluetooth: Bluetooth v4.2
+            <br>Профили Bluetooth: A2DP,AVRCP,HFP,HSP
+            <br>Операционная система: Tizen
+            <br>Экран
+            <br>Тип экрана: Super AMOLED
+            <br>Размер экрана: 1.2" (30,2 мм)
+            <br>Разрешение экрана: 360 x 360
+            <br>Глубина цвета экрана: 16M
+            <br>Процессор
+            <br>Частота процессора: 1.15GHz
+            <br>Тип процессора: Двухъядерный
+            <br>Память
+            <br>Оперативная память: (ГБ)0.75
+            <br>Встроенная память: (ГБ)4
+            <br>Доступная память: (ГБ)*1,5
+            <br>Поддержка внешних карт памяти: Нет
+            <br>Датчики: Акселерометр, Барометр, Гироскоп, Датчик сердцебиения, датчик освещенности
+            <br>Физические характеристики
+            <br>Размеры: (ВхШхТ) 45.7 мм x 41.9 мм x 12.7 мм
+            <br>Вес: (г)49 г
+            <br>Аккумулятор
+            <br>Емкость аккумулятора: 270 мА/ч
+            <br>Съемный аккумуляторНет
+            <br>Typical Usage Time (Hours): Более 45 часов
+            <br>Low Usage Time (Hours): До 120 часов
+            <br>Local Storage Music Playback Time: До 9 часов
+            <br>Indoor Workout Time: До 44 часов
+            <br>Outdoor Workout Time with GPS: До 14 часов
+            <br>Аудио и видео
+            <br>Форматы аудио: MP3,M4A,3GA
+            <br>Сервисы и приложения
+            <br>Notification Type: TTS, вибрация</p> 
+          <button id="nikebtn" class="btn btn-info">Добавить в корзину</button> 
+      </div>
+
+      <div class="card33" *ngIf=isEdit3>
+          <div class="card-header"><strong>Thomas </strong></div>
+          <div class="card-body">Пылесос Twin Helper Aquafilter 788557</div>
+          <div class="dropdown dropright">
+              <button type="button" id="razmer1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Выберите цвет
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">red</a>
+              </div>
+            </div>
+          <div class="card-footer"><mark>О товаре:</mark></div>
+          <p>Функции
+            <br>Сухая уборка:	Да
+            <br>Влажная уборка без пылесборника:	Да
+            <br>Всасывание жидкости:	Да
+            <br>Мощность
+            <br>Потребляемая мощность:	1500 Вт
+            <br>Управление
+            <br>Тип управления:	электронный
+            <br>Фильтрация
+            <br>Выходной HEPA фильтр:	H10 (моющийся)
+            <br>Наим. HEPA фильтра:	195180
+            <br>Микрофильтр:	Да
+            <br>Наим. микрофильтра:	195255
+            <br>Моторный фильтр:	Да
+            <br>Система сбора: пыли
+            <br>Работа без пылесборника:	Да
+            <br>Aqua-фильтр:	Да
+            <br>Объем Aqua-фильтра:	1 л
+            <br>Работа с пылесборником:	Да
+          <button id="nikebtn" class="btn btn-info">Добавить в корзину</button> 
+      </div>
+
+  </div>
+</body>
