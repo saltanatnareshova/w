@@ -1,0 +1,114 @@
+<body>
+  <div class="container">
+    <br>
+
+      <form>
+        <div class="form-group">
+          <input type="text" id="typeSmth" placeholder="Что вы искали?" class="form-control"> <br>
+          <img src="https://images.all-free-download.com/images/graphiclarge/mouse_click_on_the_icon_vector_280955.jpg" id="logo" class="rounded-circle" alt="Logo">
+        </div>
+      </form>
+
+      <div class="card" id="card1" style="width:300px">
+        <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1WVsOgGmWQ1JjSZPhq6xCJFXa2/AVIREX-FLY-Real-Genuine-Leather-jacket-Men-Bomber-Jacket-Fur-Collar-Cowskin-Casual-Air-Force-Flight.jpg_640x640.jpg" id = "image1" alt="Card image">
+          <div class="card-body">
+            <h5 class="card-title"><strong>{{price}} тг. </strong></h5>
+            <p class="card-title">{{model}} | {{name}}</p>
+            <p class="card-title">{{color}}</p>
+            <button id="btn1"  class="btn btn-primary" (click)="showEdit()">Подробнее</button> 
+          </div>
+      </div>
+      
+
+      <div class="card" id = "card2" style="width:300px">
+          <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1esajaLfsK1RjSszbq6AqBXXaE/JackJones-Brand-flat-collar-simple-style-suit-jacket-man-215308032.jpg" id = "image1" alt="Card image">
+            <div class="card-body">
+              <h5 class="card-title"><strong>45 000 тг. </strong></h5>
+              <p class="card-title">  JackJones brand flat collar simple style suit jacket man </p>
+              <p class="card-title">S, M, L, XL</p>
+              <button id="btn1"  class="btn btn-primary" (click)="showEdit2()">Подробнее</button> 
+            </div>
+        </div>
+        
+
+        <div class="card" id = "card3" style="width:300px">
+            <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1xmptXI_vK1RkSmRyq6xwupXaJ/Men-Sports-Casual-Wear-Zipper-COPINE-Fashion-Tide-Jacquard-Hoodies-Fleece-Jacket-Fall-Sweatshirts-Autumn-Winter.jpg" id = "image1" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title"><strong>45 000 тг. </strong></h5>
+                <p class="card-title"> Men's Sports Casual Zipper COPINE Fashion Tide Jacquard Hooded Fleece</p>
+                <p class="card-title">S, M, L, XL</p>
+                <button id="btn1"  class="btn btn-primary" (click)="showEdit3()">Подробнее</button> 
+              </div>
+          </div>
+          <br>
+
+    
+      <div class="card11" *ngIf=isEdit>
+          <div class="card-header"><strong>{{model}}</strong></div>
+          <div class="card-body">{{name}}</div>
+          <div class="dropdown dropright">
+              <button type="button" id="razmer1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Выберите размер
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">s</a>
+                <a class="dropdown-item" href="#">m</a>
+                <a class="dropdown-item" href="#">l</a>
+              </div>
+            </div>
+          <div class="card-footer"><mark>О товаре:</mark></div>
+          <p>Бренд:AVIREXFLY
+            Пол:Мужчины
+            Тип верхней одежды:Кожа и замша
+            Воротник:Отложной воротник
+            Украшение:МехМатериал:Овчина,<br>Шерсть
+            Длина рукава:Полная
+            Форма:Повседневный</p>
+          <button id="nikebtn" class="btn btn-info">Добавить в корзину</button> 
+      </div>
+      
+      <div class="card22" *ngIf=isEdit2>
+          <div class="card-header"><strong> JackJones brand</strong></div>
+          <div class="card-body">Brand flat collar simple style suit jacket man </div>
+          <div class="dropdown dropright">
+              <button type="button" id="razmer1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Выберите размер
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">S</a>
+                <a class="dropdown-item" href="#"> M</a>
+                <a class="dropdown-item" href="#"> L</a>
+                <a class="dropdown-item" href="#"> XL</a>
+              </div>
+            </div>
+          <div class="card-footer"><mark>О товаре:</mark></div>
+          <p>Бренд:Jack Jones 
+            Пол:Мужчины 
+            Тип товара:Блейзеры 
+            Вид застежки:Однобортный  Материал:Нейлон,Шерсть,Полиэстер
+            Длина рукава:Полная
+            Длина одежды:Обычный</p> 
+          <button id="nikebtn" class="btn btn-info">Добавить в корзину</button> 
+      </div>
+
+      <div class="card33" *ngIf=isEdit3>
+          <div class="card-header"><strong>Men's Sports Casual Zipper COPINE </strong></div>
+          <div class="card-body"> Fashion Tide Jacquard Hooded Fleece </div>
+          <div class="dropdown dropright">
+              <button type="button" id="razmer1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Выберите размер
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">S</a>
+                <a class="dropdown-item" href="#"> M</a>
+                <a class="dropdown-item" href="#"> L</a>
+                <a class="dropdown-item" href="#"> XL</a>
+              </div>
+            </div>
+          <div class="card-footer"><mark>О товаре:</mark></div>
+          <p>Спортивный костюм состоит из олимпийки и брюк.<br> Изделия выполнены из приятного на ощупь,<br> технологичного трикотажа. Технология DRY <br>PRO удаляет влагу с поверхности<br> кожи и позволяет чувствовать себя комфортно<br> во время тренировок. Детали олимпийки: комбинированный<br> дизайн, застежка на молнии, два кармана. Детали брюк: светоотражающий логотип бренда, контрастные лампасы, эластичный пояс.</p>
+          <button id="nikebtn" class="btn btn-info">Добавить в корзину</button> 
+      </div>
+
+  </div>
+</body>

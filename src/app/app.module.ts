@@ -6,10 +6,10 @@ import { RouterModule, Routes} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignComponent } from './components/sign/sign.component';
-import { ElectronicsComponent } from './components/electronics/electronics.component';
+import { MensclothesComponent } from './component/mensclothes/mensclothes.component';
 
 const appRoutes:Routes = [
-  {path: '', component:ElectronicsComponent},
+  {path: '', component:MensclothesComponent},
   {path: 'about', component:SignComponent}
 ]
 
@@ -17,7 +17,7 @@ const appRoutes:Routes = [
   declarations: [
     AppComponent,
     SignComponent,
-    ElectronicsComponent
+    MensclothesComponent
   ],
   imports: [
     BrowserModule,
