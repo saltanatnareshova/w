@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-size: 100% 700px;
+            }
+            #name{
+                color: white;
+                font-size: 70px;
+                margin-left: 250px;
+                margin-top: 0px;
+                font-family: monospace;
+            }
+            #time{
+                color: white;
+                font-size:70px;
+                margin-left:500px;
+                margin-top: 60px;
+                font-family: monospace;
+            }
+
+            /* to do  */
+            #todo{
+                margin-left: 42%;
+                color: white;
+
+            }
+            #form{
+                margin-left: 30%;
+            }
+           
+            #add{
+                width: 50px;
+                height: 20%;
+                margin-left: 20px;
+                border-radius: 5px;
+                background-color: blue;
+                color: white;
+                padding-top: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            
+            
+            ul li{
+                cursor: pointer;
+                padding: 9px 9px 20px 50px;
+                list-style-type: none;
+                transition: 0.2s;
+                
+            }
+            
+            #header:after{
+                content: "";
+                display:table;
+                clear: both;
+            }
+            #list{
+                margin-left: 320px;
+                margin-top: 50px;
+                color: white;
+            }
+            li{
+               
+                width: 700px;
+                height: 20px;
+                border-width: 0.5px;
+                
+            }
+            ul li.checked {
+                text-decoration: line-through;
+                
+            }
+            ul li.checked::before {  /*pseudo element*/
+                content:'';
+                position: absolute;
+                border-color:green;
+                border-style: solid;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                height: 15px;
+                width: 7px;
+                left:27%;
+            }
+            #Task {
+                margin: 0;
+                border: none;
+                border-radius: 0;
+                width: 50%;
+                padding: 10px;
+                float: left;
+                font-size: 16px;
+            }
+            .close{
+                width: 20px;
+                height: 20px;
+                position: relative;
+                padding-left: 40%;
+                
+    
+            }
+
+        </style>
+    </head>
+    <body style="background-image:url(unsplash.jpg);">
+        <h1 id="time"></h1>
+        <div class="overlay">
+             <h1 id="name">Saltok-u menya vse ok</h1>
+        </div>
+            <div>
+            <h1 id="todo">ToDo List</h1>
+            <div id="form">
+            <input id="Task" type="text" placeholder="New Task">
+            <button id="add" onclick="newElement()">Add</button>
+            <br>
+            </div>
+            
+            <ul id="list">
+                <li id="first">Walk</li>
+                <li id="first" id="checked">Read a book</li>
+                <li id="first">Relax</li>
+            </ul>
+        </div>
+        <script src="script.js">
+            </script>
+    </body>
+  
+</html>
