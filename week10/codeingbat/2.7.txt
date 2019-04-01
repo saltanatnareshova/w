@@ -1,9 +1,0 @@
-def array_front9(nums):
-  res = len(nums)
-  if res>4:
-    res=4
-  for i in range(res):
-    if nums[i] == 9:
-      return True
-    
-  return False

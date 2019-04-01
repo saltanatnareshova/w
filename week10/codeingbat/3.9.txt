@@ -1,7 +1,0 @@
-def combo_string(a, b):
-  if len(a)==0 or len(b)==0: 
-    return a or b
-  elif len(b)!=0 and len(a)!=0 and len(b)<len(a):
-    return b+a+b
-  else:
-     return a+b+a

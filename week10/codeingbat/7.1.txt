@@ -1,6 +1,0 @@
-def double_char(str):
-  new=""
-  for i in range(len(str)):
-    new = new+str[i]
-    new=new+str[i]
-  return new

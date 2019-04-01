@@ -1,3 +1,0 @@
-def non_start(a, b):
-  new = a[1:]+b[1:]
-  return new

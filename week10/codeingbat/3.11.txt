@@ -1,3 +1,0 @@
-def left2(str):
-  new = str[2:]+str[:2]
-  return new
