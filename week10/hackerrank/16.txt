@@ -1,0 +1,5 @@
+e = int(input())
+eng_set = set(map(int, input().split()))
+fren_num = int(input())
+fren_set = set(map(int, input().split()))
+print(len(eng_set.union(fren_set)))

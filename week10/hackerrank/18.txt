@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+e = int(input())
+eng_set = set(map(int, input().split()))
+fren_num = int(input())
+fren_set = set(map(int, input().split()))
+print(len(eng_set.difference(fren_set)))
