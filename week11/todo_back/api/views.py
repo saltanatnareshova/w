@@ -7,14 +7,14 @@ def index(request):
     return HttpResponse('<h1>What is your main focus for today?</h1>')
 
 def tasklists(request):
-    tasklist = TaskList.object.all()
+    tasklist = TaskList.objects.all()
     json_tasks=[a.to_json() for a in tasklist]
 
     return JsonResponse(json_tasks, safe=False)
 
 def task_detail(request, pk):
     try:
-        tasklist = TaskList.object.get(id=pk)
+        tasklist = TaskList.objects.get(id=pk)
     except TaskList.DoesNotExist as e:
         return JsonResponse({'error':str(e)})
     return JsonResponse(tasklist.to_json())
