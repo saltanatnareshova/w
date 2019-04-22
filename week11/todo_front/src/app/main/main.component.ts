@@ -9,7 +9,7 @@ import { ProviderService } from '../shared/service/provider.service';
 })
 export class MainComponent implements OnInit {
 
-  public tasklists: ITasklist[]= [];
+  public tasklist: ITasklist[]= [];
   public tasks: ITasks[] = [];
 
   constructor(private provider:ProviderService) { }
@@ -19,7 +19,14 @@ export class MainComponent implements OnInit {
     this.provider.getTaskList().then(res=>{
       console.log(res);
 
-      this.tasklists = res;
+      this.tasklist = res;
     });
+  }
+  getTasks(tasklist: ITasklist){
+    this.provider.getTasks(tasklist).then(res => {
+      console.log(res);
+
+      this.tasks = res;
+    })  
   }
 }

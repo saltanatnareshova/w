@@ -17,6 +17,6 @@ export class ProviderService extends TasklistService{
   }
 
   getTasks(tasklist: ITasklist): Promise<ITasks[]> {
-    return this.get('http://127.0.0.1:8000/api/tasklist/${tasklist.id}/tasks', {});
+    return this.get(`http://127.0.0.1:8000/api/tasklist/${tasklist.id}/tasks`, {});
   }
 }

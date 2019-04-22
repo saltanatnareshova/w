@@ -5,5 +5,5 @@ urlpatterns = [
     path('', views.index),
     path('tasklist/', views.tasklists),
     path('tasklist/<int:pk>/', views.task_detail),
-    path('tasks/<int:pk>/tasks', views.tasks),
+    path('tasklist/<int:pk>/tasks', views.tasks),
 ]
