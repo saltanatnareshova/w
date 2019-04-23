@@ -28,5 +28,5 @@ class Task(models.Model):
             'created_at':self.created_at,
             'due_on': self.due_on,
             'status': self.status,
-            'tasklist':self.tasklist
+
         }

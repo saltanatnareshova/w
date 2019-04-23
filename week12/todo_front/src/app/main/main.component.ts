@@ -11,6 +11,7 @@ export class MainComponent implements OnInit {
 
   public tasklist: ITasklist[]= [];
   public tasks: ITasks[] = [];
+  public name: any = '';
 
   constructor(private provider:ProviderService) { }
 
@@ -30,5 +31,27 @@ export class MainComponent implements OnInit {
     })  
   }
 
- 
+  updateTaskList(task:ITasklist){
+    this.provider.updateTaskList(task).then(res => {
+      console.log(task.name + 'updated');
+    })
+  }
+
+  deleteTaskList(task:ITasklist){
+    this.provider.deleteTaskList(task.id).then(res =>{
+      console.log(task.name + 'deleted');
+      this.provider.getTaskList().then(r =>{
+        this.tasklist = r;
+      });
+    });
+  }
+
+  createTaskList(){
+    if(this.name != ''){
+      this.provider.createTaskList(this.name).then(res =>{
+        this.name = '';
+        this.tasklist.push(res);
+      });
+    }
+  }
 }

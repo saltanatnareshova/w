@@ -19,6 +19,20 @@ export class ProviderService extends TasklistService{
   getTasks(tasklist: ITasklist): Promise<ITasks[]> {
     return this.get(`http://127.0.0.1:8000/api/tasklist/${tasklist.id}/tasks`, {});
   }
+  createTaskList(name: any): Promise<ITasklist> {
+    return this.post('http://127.0.0.1:8000/api/tasklist/', {
+// tslint:disable-next-line: object-literal-shorthand
+      name: name
+    });
+  }
 
-  
+  updateTaskList(tasklist: ITasklist): Promise<ITasklist> {
+    return this.put(`http://127.0.0.1:8000/api/tasklist/${tasklist.id}/`, {
+      name: tasklist.name
+    });
+  }
+
+  deleteTaskList(id: number): Promise<any> {
+    return this.delet(`http://127.0.0.1:8000/api/tasklist/${id}/`, {});
+  }
 }
